@@ -19,7 +19,7 @@ public class Add extends AppCompatActivity {
         name = (EditText) findViewById(R.id.name);
         number = (TextView) findViewById(R.id.number);
     }
-
+//test
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
