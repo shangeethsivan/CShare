@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Add extends AppCompatActivity {
     EditText name;
@@ -24,13 +23,13 @@ public class Add extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0) {
             if (resultCode == RESULT_OK) {
-
                 name.setText(data.getStringExtra("name"));
                 number.setText(data.getStringExtra("number"));
             }
             if (resultCode == RESULT_CANCELED) {
                 //handle cancel
-                Toast.makeText(this, "Error Occoured Please Try Again", Toast.LENGTH_SHORT).show();
+                finish();
+                //Toast.makeText(this, "Error Occoured Please Try Again", Toast.LENGTH_SHORT).show();
             }
         }
     }

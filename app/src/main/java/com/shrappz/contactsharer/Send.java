@@ -37,6 +37,7 @@ public class Send extends AppCompatActivity implements AdapterView.OnItemClickLi
     private ArrayList<Item> items;
     private ImageView qrCodeImageview;
     public final static int WIDTH = 500;
+    public final static int HEIGHT = 500;
     Dialog dialog;
     private ContactLoadAdapter adapter;
     String header_info = "BEGIN:VCARD"; //N: is the prefix for MECARD Name
@@ -167,11 +168,11 @@ public class Send extends AppCompatActivity implements AdapterView.OnItemClickLi
     }
 
     // this is method call from on create and return bitmap image of QRCode.
-    Bitmap encodeAsBitmap(String str) throws WriterException {
+   Bitmap encodeAsBitmap(String str) throws WriterException {
         BitMatrix result;
         try {
             result = new MultiFormatWriter().encode(str,
-                    BarcodeFormat.QR_CODE, WIDTH, WIDTH, null);
+                    BarcodeFormat.QR_CODE, WIDTH, HEIGHT, null);
         } catch (IllegalArgumentException iae) {
             // Unsupported format
             return null;
