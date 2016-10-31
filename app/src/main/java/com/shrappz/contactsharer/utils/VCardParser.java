@@ -1,4 +1,4 @@
-package com.shrappz.contactsharer;
+package com.shrappz.contactsharer.utils;
 
 /**
  * Created on 13-10-2016.

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_demo_slider"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoSlider">
+
+    <RelativeLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cream"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_slider"
+            android:text="FINISH"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_slider"
+            android:text="NEXT"
+            android:textColor="@color/colorPrimary" />
+
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar"
+        android:text="Hello World!" />
+
+    <LinearLayout
+        android:id="@+id/dots_layout"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_above="@id/bottom_bar"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
+</RelativeLayout>

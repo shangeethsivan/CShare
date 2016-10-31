@@ -1,0 +1,39 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:capitalize="words"
+        android:icon="@drawable/name"
+        android:inputType="textCapWords"
+        android:key="@string/user_name"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Name" />
+    <EditTextPreference
+        android:capitalize="words"
+        android:icon="@drawable/phone"
+        android:inputType="textCapWords"
+        android:key="@string/user_mobile"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Number" />
+
+    <EditTextPreference
+        android:capitalize="words"
+        android:icon="@drawable/email"
+        android:inputType="textCapWords"
+        android:key="@string/user_email"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Email" />
+
+    <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
+         dismiss it. -->
+    <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+
+</PreferenceScreen>
