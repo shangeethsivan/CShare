@@ -86,4 +86,6 @@
     <string name="profile_text">Fill all your details to generate your \n Unique QRCode </string>
     <string name="profile_text2">Place your QR contact widget on your home screen after saving your details</string>
     <string name="key_qr_path">image_path</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3701495917205916/4902005387</string>
+    <string name="edit_details">Edit Details</string>
 </resources>

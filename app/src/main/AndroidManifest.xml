@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shrappz.contactsharer">
+    package="com.shrappz.qrcontact">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -14,25 +16,30 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".SendActivity"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shrappz.contactsharer.HomeActivity" />
+                android:value="com.shrappz.qrcontact.HomeActivity" />
         </activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Add"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shrappz.contactsharer.HomeActivity" />
+                android:value="com.shrappz.qrcontact.HomeActivity" />
         </activity>
         <activity
             android:name=".CameraScannerActivity"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shrappz.contactsharer.HomeActivity" />
+                android:value="com.shrappz.qrcontact.HomeActivity" />
         </activity>
 
         <receiver android:name=".MyContactWidget">
@@ -49,13 +56,15 @@
             android:name=".MyProfileSettings"
             android:label="@string/title_activity_my_profile"
             android:parentActivityName=".HomeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shrappz.contactsharer.HomeActivity" />
+                android:value="com.shrappz.qrcontact.HomeActivity" />
         </activity>
         <activity
             android:name=".SplashScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,10 +72,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserDetailsActivity" />
+        <activity
+            android:name=".UserDetailsActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".DemoSlider"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="bf14ecfe81bf5b44e513219094198e056c039e2f" />
+
+        <activity
+            android:name=".MyContactActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shrappz.qrcontact.HomeActivity" />
+        </activity>
     </application>
 
 </manifest>
